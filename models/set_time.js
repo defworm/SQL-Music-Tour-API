@@ -16,19 +16,16 @@ module.exports = (sequelize, DataTypes) => {
   Set_Time.init({
     event_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+     
     },
     stage_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      
     },
 
     band_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement:true
+      
     },
     start_time: {
       type: DataTypes.DATE,

@@ -21,14 +21,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     stage_id: {
       type: DataTypes.SMALLINT,
-      primaryKey: true,
-      autoIncrement: true
+      
     },
 
     event_id: {
       type: DataTypes.SMALLINT,
-      primaryKey: true,
-      autoIncrement: true
+      
     },
   }, {
     sequelize,

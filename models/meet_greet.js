@@ -14,15 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Meet_Greet.init({
+
+    meet_greet_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     event_id: {
       type: DataTypes.SMALLINT,
-      primaryKey: true,
-      autoIncrement: true
+      
     },
     band_id: {
       type: DataTypes.SMALLINT,
-      primaryKey: true,
-      autoIncrement: true
+      
     },
     meet_start_time: {
       type: DataTypes.DATE,
