@@ -25,7 +25,7 @@ events.get('/:name', async (req, res) => {
             where: { name: req.params.name },
             include: [
                  { model: Meet_Greet, as: "meet_greets",
-        include: { model: Event, as: "event",
+        include: { model: Band, as: "band",
         where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } }
      }
     },
@@ -34,7 +34,10 @@ events.get('/:name', async (req, res) => {
         as: "set_times",
         include: { model: Event, as: "event",
         where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } }
-    }
+    },
+    model: Stage,
+    as: "stages",
+
     }
 ]
         })
