@@ -10,17 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ Band, Event, Stage }) {
-      SetTime.belongsTo(Band, {
+      Set_Time.belongsTo(Band, {
         foreign: "band_id",
         as: "band"
       })
 
-      SetTime.belongsTo(Event, {
+      Set_Time.belongsTo(Event, {
         foreignKey: "event_id",
         as: "event"
       })
 
-      SetTime.belongsTo(Stage, {
+      Set_Time.belongsTo(Stage, {
         foreignKey: "stage_id",
         as: "stage"
       })
